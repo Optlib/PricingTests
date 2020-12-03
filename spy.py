@@ -168,6 +168,6 @@ print(todays_price['Close']) ##Print the closing price of the stock for today
 R = new_df.cumsum()
 r = (R - R.shift(1))/R.shift(1)
 r = R.diff()
-sr = r.mean()/r.std() * np.sqrt(252)
+sr = r.mean()/(r.std() * np.sqrt(252))
 
 print('Sharp Ratio='+sr)
